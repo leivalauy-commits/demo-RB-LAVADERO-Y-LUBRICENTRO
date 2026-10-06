@@ -1,0 +1,6 @@
+{
+  "name": "R.B. Lavadero & Lubricentro",
+  "description": "Sistema de gestión integral y administración para lavadero de autos y lubricentro automotor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
