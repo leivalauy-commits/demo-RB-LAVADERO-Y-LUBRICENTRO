@@ -106,7 +106,10 @@ const STORAGE_KEYS = {
 
 function getStorage<T>(key: string, fallback: T): T {
   try {
-    const item = localStorage.getItem(key);
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return fallback;
+    }
+    const item = window.localStorage.getItem(key);
     return item ? JSON.parse(item) : fallback;
   } catch (e) {
     console.warn(`Error reading localStorage for ${key}`, e);
@@ -116,7 +119,10 @@ function getStorage<T>(key: string, fallback: T): T {
 
 function setStorage<T>(key: string, data: T) {
   try {
-    localStorage.setItem(key, JSON.stringify(data));
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return;
+    }
+    window.localStorage.setItem(key, JSON.stringify(data));
   } catch (e) {
     console.warn(`Error saving localStorage for ${key}`, e);
   }
