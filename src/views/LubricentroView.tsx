@@ -41,7 +41,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
-            <Wrench style={{ color: '#E10600' }} className="h-6 w-6" />
+            <Wrench style={{ color: '#D71920' }} className="h-6 w-6" />
             <span>Lubricentro</span>
           </h1>
           <p className="text-xs text-[#A3A3A3] mt-0.5">
@@ -51,8 +51,8 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
 
         <button
           onClick={onOpenNewLubeModal}
-          style={{ backgroundColor: '#E10600' }}
-          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#E10600]/25 transition-all hover:bg-[#FF1A1A] active:scale-98"
+          style={{ backgroundColor: '#D71920' }}
+          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#D71920]/25 transition-all hover:bg-[#E02027] active:scale-98"
         >
           <Plus className="h-4 w-4 stroke-[3]" />
           <span>+ Nuevo Servicio Lubricentro</span>
@@ -61,7 +61,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
 
       {/* Search Bar */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="rounded-xl border p-4"
       >
         <div className="relative">
@@ -71,21 +71,21 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Buscar por Patente, Cliente, Vehículo o Tipo de Aceite..."
-            style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-            className="w-full rounded-md border py-2 pl-9 pr-3 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden focus:ring-1 focus:ring-[#E10600]/40"
+            style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+            className="w-full rounded-md border py-2 pl-9 pr-3 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden focus:ring-1 focus:ring-[#D71920]/40"
           />
         </div>
       </div>
 
       {/* Main Table */}
       <div
-        style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+        style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
         className="overflow-hidden rounded-xl border shadow-sm"
       >
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead
-              style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+              style={{ backgroundColor: '#151617', borderColor: '#252627' }}
               className="border-b uppercase font-bold text-[#A3A3A3] text-[11px] tracking-wider"
             >
               <tr>
@@ -101,7 +101,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                 <th className="px-4 py-3 text-right">Tarjeta</th>
               </tr>
             </thead>
-            <tbody style={{ borderColor: '#242424' }} className="divide-y divide-[#1F1F1F]">
+            <tbody style={{ borderColor: '#252627' }} className="divide-y divide-[#1F1F1F]">
               {filteredServices.length === 0 ? (
                 <tr>
                   <td colSpan={10} className="py-12 text-center text-[#777777] text-xs">
@@ -113,7 +113,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                   return (
                     <tr
                       key={service.id}
-                      style={{ backgroundColor: '#111111' }}
+                      style={{ backgroundColor: '#151617' }}
                       className="transition hover:bg-[#181818] group"
                     >
                       {/* Fecha */}
@@ -171,7 +171,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                             style={{
                               backgroundColor: 'rgba(225, 6, 0, 0.12)',
                               borderColor: 'rgba(225, 6, 0, 0.4)',
-                              color: '#FF1A1A',
+                              color: '#E02027',
                             }}
                             className="rounded border px-2 py-0.5 font-mono text-xs font-bold"
                           >
@@ -193,8 +193,8 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                         <select
                           value={service.status}
                           onChange={(e) => updateLubeStatus(service.id, e.target.value as WashStatus)}
-                          style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                          className="rounded border px-2 py-1 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                          style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                          className="rounded border px-2 py-1 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
                         >
                           <option value="en_espera">En espera</option>
                           <option value="en_proceso">En proceso</option>
@@ -207,8 +207,8 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                       <td className="px-4 py-3 text-right whitespace-nowrap">
                         <button
                           onClick={() => setSelectedSticker(service)}
-                          style={{ backgroundColor: '#181818', borderColor: '#242424' }}
-                          className="rounded border px-2 py-1 text-[11px] font-bold text-white hover:border-[#E10600] hover:text-[#E10600] transition flex items-center gap-1 ml-auto"
+                          style={{ backgroundColor: '#181818', borderColor: '#252627' }}
+                          className="rounded border px-2 py-1 text-[11px] font-bold text-white hover:border-[#D71920] hover:text-[#D71920] transition flex items-center gap-1 ml-auto"
                           title="Ver tarjeta de parabrisas / Comprobante"
                         >
                           <FileText className="h-3 w-3" />
@@ -228,12 +228,12 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
       {selectedSticker && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs">
           <div
-            style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+            style={{ backgroundColor: '#151617', borderColor: '#252627' }}
             className="w-full max-w-md rounded-xl border p-6 shadow-2xl space-y-4"
           >
-            <div style={{ borderColor: '#242424' }} className="flex items-center justify-between border-b pb-3">
+            <div style={{ borderColor: '#252627' }} className="flex items-center justify-between border-b pb-3">
               <div className="flex items-center gap-2">
-                <Wrench style={{ color: '#E10600' }} className="h-5 w-5" />
+                <Wrench style={{ color: '#D71920' }} className="h-5 w-5" />
                 <h3 className="text-sm font-extrabold uppercase tracking-tight text-white">
                   Tarjeta de Control de Aceite
                 </h3>
@@ -248,11 +248,11 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
 
             {/* Sticker Graphic Container */}
             <div
-              style={{ backgroundColor: '#070707', borderColor: '#E10600' }}
+              style={{ backgroundColor: '#070707', borderColor: '#D71920' }}
               className="rounded-lg border-2 border-dashed p-5 text-center space-y-3 font-mono"
             >
-              <div style={{ borderColor: '#242424' }} className="border-b pb-2">
-                <div style={{ color: '#E10600' }} className="text-base font-black tracking-wider">
+              <div style={{ borderColor: '#252627' }} className="border-b pb-2">
+                <div style={{ color: '#D71920' }} className="text-base font-black tracking-wider">
                   {config.name}
                 </div>
                 <div className="text-[10px] text-[#A3A3A3] font-sans">
@@ -266,7 +266,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
               </div>
               <div className="flex justify-between items-center text-xs px-2">
                 <span className="text-[#A3A3A3] font-sans">Patente:</span>
-                <span style={{ color: '#E10600' }} className="font-black">{selectedSticker.plate}</span>
+                <span style={{ color: '#D71920' }} className="font-black">{selectedSticker.plate}</span>
               </div>
               <div className="flex justify-between items-center text-xs px-2">
                 <span className="text-[#A3A3A3] font-sans">Fecha Servicio:</span>
@@ -278,10 +278,10 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
               </div>
 
               <div
-                style={{ backgroundColor: '#111111', borderColor: 'rgba(225, 6, 0, 0.4)' }}
+                style={{ backgroundColor: '#151617', borderColor: 'rgba(225, 6, 0, 0.4)' }}
                 className="rounded border p-2.5 my-2"
               >
-                <span style={{ color: '#E10600' }} className="text-[10px] uppercase font-bold block tracking-widest font-sans">
+                <span style={{ color: '#D71920' }} className="text-[10px] uppercase font-bold block tracking-widest font-sans">
                   PRÓXIMO CAMBIO DE ACEITE
                 </span>
                 <span className="text-xl font-black text-white tracking-wider">
@@ -303,7 +303,7 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                 onClick={() => {
                   window.print();
                 }}
-                style={{ backgroundColor: '#181818', borderColor: '#242424' }}
+                style={{ backgroundColor: '#181818', borderColor: '#252627' }}
                 className="flex-1 flex items-center justify-center gap-1.5 rounded-md border py-2.5 text-xs font-bold text-white hover:bg-[#222222]"
               >
                 <Printer className="h-4 w-4" />
@@ -316,8 +316,8 @@ export const LubricentroView: React.FC<LubricentroViewProps> = ({
                   );
                   alert('¡Texto de comprobante copiado al portapapeles para enviar por WhatsApp!');
                 }}
-                style={{ backgroundColor: '#E10600' }}
-                className="flex-1 flex items-center justify-center gap-1.5 rounded-md py-2.5 text-xs font-bold text-white hover:bg-[#FF1A1A] uppercase transition"
+                style={{ backgroundColor: '#D71920' }}
+                className="flex-1 flex items-center justify-center gap-1.5 rounded-md py-2.5 text-xs font-bold text-white hover:bg-[#E02027] uppercase transition"
               >
                 <Share2 className="h-4 w-4" />
                 <span>WhatsApp</span>

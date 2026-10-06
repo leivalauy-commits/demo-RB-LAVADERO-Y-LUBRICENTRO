@@ -67,7 +67,7 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
-            <Car style={{ color: '#E10600' }} className="h-6 w-6" />
+            <Car style={{ color: '#D71920' }} className="h-6 w-6" />
             <span>Vehículos</span>
           </h1>
           <p className="text-xs text-[#A3A3A3] mt-0.5">
@@ -77,8 +77,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
 
         <button
           onClick={() => setShowAddModal(true)}
-          style={{ backgroundColor: '#E10600' }}
-          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#E10600]/25 transition-all hover:bg-[#FF1A1A] active:scale-98"
+          style={{ backgroundColor: '#D71920' }}
+          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#D71920]/25 transition-all hover:bg-[#E02027] active:scale-98"
         >
           <Plus className="h-4 w-4 stroke-[3]" />
           <span>+ Nuevo Vehículo</span>
@@ -87,7 +87,7 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
 
       {/* Search Bar */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="rounded-xl border p-4"
       >
         <div className="relative">
@@ -97,21 +97,21 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Buscar por Patente (ej: AB 123 CD), Marca, Modelo o Dueño..."
-            style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-            className="w-full rounded-md border py-2 pl-9 pr-3 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden focus:ring-1 focus:ring-[#E10600]/40"
+            style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+            className="w-full rounded-md border py-2 pl-9 pr-3 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden focus:ring-1 focus:ring-[#D71920]/40"
           />
         </div>
       </div>
 
       {/* Vehicles Table */}
       <div
-        style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+        style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
         className="overflow-hidden rounded-xl border shadow-sm"
       >
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead
-              style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+              style={{ backgroundColor: '#151617', borderColor: '#252627' }}
               className="border-b uppercase font-bold text-[#A3A3A3] text-[11px] tracking-wider"
             >
               <tr>
@@ -125,7 +125,7 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                 <th className="px-4 py-3 text-right">Acciones</th>
               </tr>
             </thead>
-            <tbody style={{ borderColor: '#242424' }} className="divide-y divide-[#1F1F1F]">
+            <tbody style={{ borderColor: '#252627' }} className="divide-y divide-[#1F1F1F]">
               {filteredVehicles.length === 0 ? (
                 <tr>
                   <td colSpan={8} className="py-12 text-center text-[#777777] text-xs">
@@ -150,7 +150,7 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                     <tr
                       key={vehicle.id}
                       onClick={() => onSelectVehicle(vehicle)}
-                      style={{ backgroundColor: '#111111' }}
+                      style={{ backgroundColor: '#151617' }}
                       className="cursor-pointer transition hover:bg-[#181818] group"
                     >
                       {/* Patente */}
@@ -159,7 +159,7 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                       </td>
 
                       {/* Marca y Modelo */}
-                      <td className="px-4 py-3 font-bold text-white whitespace-nowrap group-hover:text-[#E10600] transition">
+                      <td className="px-4 py-3 font-bold text-white whitespace-nowrap group-hover:text-[#D71920] transition">
                         {vehicle.brand} {vehicle.model}
                       </td>
 
@@ -193,7 +193,7 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                       {/* Cantidad de servicios */}
                       <td className="px-4 py-3 text-center whitespace-nowrap">
                         <span
-                          style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+                          style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
                           className="rounded border px-2 py-0.5 font-mono font-bold text-white"
                         >
                           {totalCount}
@@ -208,15 +208,15 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                             style={{
                               backgroundColor: 'rgba(225, 6, 0, 0.1)',
                               borderColor: 'rgba(225, 6, 0, 0.4)',
-                              color: '#FF1A1A',
+                              color: '#E02027',
                             }}
-                            className="rounded border px-2.5 py-1 text-[11px] font-bold hover:bg-[#E10600] hover:text-white transition"
+                            className="rounded border px-2.5 py-1 text-[11px] font-bold hover:bg-[#D71920] hover:text-white transition"
                           >
                             + Cargar Servicio
                           </button>
                           <button
                             onClick={() => onSelectVehicle(vehicle)}
-                            className="rounded p-1 text-[#666666] group-hover:text-[#E10600] transition"
+                            className="rounded p-1 text-[#666666] group-hover:text-[#D71920] transition"
                           >
                             <ChevronRight className="h-4 w-4" />
                           </button>
@@ -235,11 +235,11 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
       {showAddModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs">
           <div
-            style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+            style={{ backgroundColor: '#151617', borderColor: '#252627' }}
             className="w-full max-w-md rounded-xl border p-5 shadow-2xl"
           >
             <h2 className="text-base font-extrabold uppercase tracking-tight text-white mb-4 flex items-center gap-2">
-              <Car style={{ color: '#E10600' }} className="h-5 w-5" />
+              <Car style={{ color: '#D71920' }} className="h-5 w-5" />
               <span>+ Nuevo Vehículo</span>
             </h2>
             <form onSubmit={handleCreateVehicle} className="space-y-4">
@@ -253,8 +253,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                   value={newPlate}
                   onChange={(e) => setNewPlate(e.target.value.toUpperCase())}
                   placeholder="AB 123 CD"
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-2 font-mono text-sm font-bold uppercase text-white focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-2 font-mono text-sm font-bold uppercase text-white focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
 
@@ -269,8 +269,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                     value={newBrand}
                     onChange={(e) => setNewBrand(e.target.value)}
                     placeholder="Toyota, Ford..."
-                    style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                    className="w-full rounded-md border px-3 py-2 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                    style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                    className="w-full rounded-md border px-3 py-2 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                   />
                 </div>
                 <div>
@@ -283,8 +283,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                     value={newModel}
                     onChange={(e) => setNewModel(e.target.value)}
                     placeholder="Corolla, Ranger..."
-                    style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                    className="w-full rounded-md border px-3 py-2 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                    style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                    className="w-full rounded-md border px-3 py-2 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -299,8 +299,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                     value={newColor}
                     onChange={(e) => setNewColor(e.target.value)}
                     placeholder="Blanco, Gris..."
-                    style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                    className="w-full rounded-md border px-3 py-2 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                    style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                    className="w-full rounded-md border px-3 py-2 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                   />
                 </div>
                 <div>
@@ -312,8 +312,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                     value={newKm}
                     onChange={(e) => setNewKm(e.target.value ? Number(e.target.value) : '')}
                     placeholder="75000"
-                    style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                    className="w-full rounded-md border px-3 py-2 font-mono text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                    style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                    className="w-full rounded-md border px-3 py-2 font-mono text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -325,8 +325,8 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                 <select
                   value={newClientId}
                   onChange={(e) => setNewClientId(e.target.value)}
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-2 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-2 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
                 >
                   <option value="">Seleccionar cliente...</option>
                   {clients.map((c) => (
@@ -341,15 +341,15 @@ export const VehiclesView: React.FC<VehiclesViewProps> = ({
                 <button
                   type="button"
                   onClick={() => setShowAddModal(false)}
-                  style={{ backgroundColor: '#181818', borderColor: '#242424' }}
+                  style={{ backgroundColor: '#181818', borderColor: '#252627' }}
                   className="flex-1 rounded-md border py-2 text-xs font-semibold text-[#A3A3A3] hover:text-white"
                 >
                   Cancelar
                 </button>
                 <button
                   type="submit"
-                  style={{ backgroundColor: '#E10600' }}
-                  className="flex-1 rounded-md py-2 text-xs font-bold uppercase text-white hover:bg-[#FF1A1A] transition"
+                  style={{ backgroundColor: '#D71920' }}
+                  className="flex-1 rounded-md py-2 text-xs font-bold uppercase text-white hover:bg-[#E02027] transition"
                 >
                   Guardar Vehículo
                 </button>

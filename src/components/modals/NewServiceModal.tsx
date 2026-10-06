@@ -207,17 +207,17 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-xs">
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-xl border shadow-2xl"
       >
         {/* Header */}
         <div
-          style={{ backgroundColor: '#0D0D0D', borderColor: '#242424' }}
+          style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
           className="sticky top-0 z-10 flex items-center justify-between border-b px-5 py-4 backdrop-blur-sm"
         >
           <div className="flex items-center gap-2.5">
             <div
-              style={{ backgroundColor: '#E10600' }}
+              style={{ backgroundColor: '#D71920' }}
               className="flex h-8 w-8 items-center justify-center rounded-md font-black text-white"
             >
               +
@@ -249,18 +249,18 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
         <form onSubmit={handleSubmit} className="p-5 space-y-5">
           {/* PASO 1: CLIENTE */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="rounded-lg border p-3.5 space-y-3"
           >
             <div className="flex items-center justify-between">
-              <label style={{ color: '#E10600' }} className="text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <label style={{ color: '#D71920' }} className="text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                 <span>1. Cliente</span>
               </label>
               <button
                 type="button"
                 onClick={() => setIsCreatingNewClient(!isCreatingNewClient)}
-                style={{ color: '#E10600' }}
-                className="text-xs font-semibold hover:text-[#FF1A1A] flex items-center gap-1"
+                style={{ color: '#D71920' }}
+                className="text-xs font-semibold hover:text-[#E02027] flex items-center gap-1"
               >
                 {isCreatingNewClient ? '← Seleccionar existente' : '+ Nuevo Cliente'}
               </button>
@@ -278,8 +278,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                     value={newClientName}
                     onChange={(e) => setNewClientName(e.target.value)}
                     placeholder="Ej: Marcos Ramos"
-                    style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                    className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                    style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                    className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                   />
                 </div>
                 <div>
@@ -291,8 +291,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                     value={newClientPhone}
                     onChange={(e) => setNewClientPhone(e.target.value)}
                     placeholder="Ej: 11 3344-5566"
-                    style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                    className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                    style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                    className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                   />
                 </div>
               </div>
@@ -303,8 +303,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   value={clientSearchText}
                   onChange={(e) => setClientSearchText(e.target.value)}
                   placeholder="Escriba para buscar cliente o teléfono..."
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                 />
                 <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pt-1">
                   {filteredClients.slice(0, 8).map((client) => {
@@ -319,8 +319,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                         }}
                         style={
                           isSelected
-                            ? { backgroundColor: '#E10600', color: '#FFFFFF' }
-                            : { backgroundColor: '#141414', color: '#A3A3A3', borderColor: '#242424' }
+                            ? { backgroundColor: '#D71920', color: '#FFFFFF' }
+                            : { backgroundColor: '#141414', color: '#A3A3A3', borderColor: '#252627' }
                         }
                         className="rounded-md border px-2.5 py-1 text-xs font-medium transition hover:text-white"
                       >
@@ -335,10 +335,10 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
 
           {/* PASO 2: VEHÍCULO */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="rounded-lg border p-3.5 space-y-3"
           >
-            <label style={{ color: '#E10600' }} className="text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+            <label style={{ color: '#D71920' }} className="text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
               <span>2. Vehículo</span>
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -352,8 +352,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   value={plate}
                   onChange={(e) => handlePlateChange(e.target.value)}
                   placeholder="AB 123 CD"
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-white focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold uppercase tracking-wider text-white focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
               <div>
@@ -365,8 +365,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   value={brand}
                   onChange={(e) => setBrand(e.target.value)}
                   placeholder="Toyota, Ford..."
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
               <div>
@@ -378,8 +378,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   value={model}
                   onChange={(e) => setModel(e.target.value)}
                   placeholder="Corolla, Ranger..."
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
               <div>
@@ -391,8 +391,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   value={color}
                   onChange={(e) => setColor(e.target.value)}
                   placeholder="Blanco, Negro..."
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
             </div>
@@ -406,18 +406,18 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                 value={currentKm}
                 onChange={(e) => setCurrentKm(e.target.value ? Number(e.target.value) : '')}
                 placeholder="Ej: 85000"
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-48 rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-48 rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
           </div>
 
           {/* PASO 3: TIPO DE SERVICIO Y PRECIO */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="rounded-lg border p-3.5 space-y-3"
           >
-            <label style={{ color: '#E10600' }} className="text-xs font-bold uppercase tracking-wider block">
+            <label style={{ color: '#D71920' }} className="text-xs font-bold uppercase tracking-wider block">
               3. Tipo de Servicio
             </label>
 
@@ -433,17 +433,17 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                       isSelected
                         ? {
                             backgroundColor: 'rgba(225, 6, 0, 0.15)',
-                            borderColor: '#E10600',
+                            borderColor: '#D71920',
                           }
                         : {
-                            backgroundColor: '#111111',
-                            borderColor: '#242424',
+                            backgroundColor: '#151617',
+                            borderColor: '#252627',
                           }
                     }
                     className="flex flex-col items-start rounded-md border p-2.5 text-left transition hover:border-[#383838]"
                   >
                     <span className="text-xs font-bold truncate w-full text-white">{s.name}</span>
-                    <span style={{ color: '#E10600' }} className="text-[11px] font-semibold mt-1">
+                    <span style={{ color: '#D71920' }} className="text-[11px] font-semibold mt-1">
                       ${s.price.toLocaleString('es-AR')}
                     </span>
                     <span className="text-[10px] text-[#777777] uppercase mt-0.5">
@@ -463,8 +463,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   type="text"
                   value={customServiceName}
                   onChange={(e) => setCustomServiceName(e.target.value)}
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
               <div>
@@ -476,8 +476,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   required
                   value={price}
                   onChange={(e) => setPrice(Number(e.target.value))}
-                  style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                  className="w-full rounded-md border px-3 py-1.5 font-mono text-sm font-bold text-emerald-400 focus:border-[#E10600] focus:outline-hidden"
+                  style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                  className="w-full rounded-md border px-3 py-1.5 font-mono text-sm font-bold text-emerald-400 focus:border-[#D71920] focus:outline-hidden"
                 />
               </div>
             </div>
@@ -487,7 +487,7 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Forma de pago */}
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 space-y-2"
             >
               <label className="text-xs font-bold uppercase tracking-wider text-white block">
@@ -501,8 +501,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                     onClick={() => setPaymentMethod(m)}
                     style={
                       paymentMethod === m
-                        ? { backgroundColor: '#E10600', color: '#FFFFFF' }
-                        : { backgroundColor: '#111111', borderColor: '#242424', color: '#A3A3A3' }
+                        ? { backgroundColor: '#D71920', color: '#FFFFFF' }
+                        : { backgroundColor: '#151617', borderColor: '#252627', color: '#A3A3A3' }
                     }
                     className="rounded-md border py-2 text-xs font-semibold capitalize transition hover:text-white"
                   >
@@ -514,7 +514,7 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
 
             {/* Estado */}
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 space-y-2"
             >
               <label className="text-xs font-bold uppercase tracking-wider text-white block">
@@ -527,7 +527,7 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   style={
                     status === 'en_espera'
                       ? { backgroundColor: '#1C1500', borderColor: '#EAB308', color: '#FDE047' }
-                      : { backgroundColor: '#111111', borderColor: '#242424', color: '#A3A3A3' }
+                      : { backgroundColor: '#151617', borderColor: '#252627', color: '#A3A3A3' }
                   }
                   className="rounded-md border py-2 text-xs font-bold transition"
                 >
@@ -539,7 +539,7 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   style={
                     status === 'en_proceso'
                       ? { backgroundColor: '#051C2C', borderColor: '#0284C7', color: '#7DD3FC' }
-                      : { backgroundColor: '#111111', borderColor: '#242424', color: '#A3A3A3' }
+                      : { backgroundColor: '#151617', borderColor: '#252627', color: '#A3A3A3' }
                   }
                   className="rounded-md border py-2 text-xs font-bold transition"
                 >
@@ -551,7 +551,7 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
                   style={
                     status === 'terminado'
                       ? { backgroundColor: '#042111', borderColor: '#16A34A', color: '#86EFAC' }
-                      : { backgroundColor: '#111111', borderColor: '#242424', color: '#A3A3A3' }
+                      : { backgroundColor: '#151617', borderColor: '#252627', color: '#A3A3A3' }
                   }
                   className="rounded-md border py-2 text-xs font-bold transition"
                 >
@@ -571,8 +571,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Ej: Aspirar baúl a fondo..."
-              style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-              className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+              style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+              className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
             />
           </div>
 
@@ -580,8 +580,8 @@ export const NewServiceModal: React.FC<NewServiceModalProps> = ({
           <div className="pt-2">
             <button
               type="submit"
-              style={{ backgroundColor: '#E10600' }}
-              className="flex w-full items-center justify-center gap-2 rounded-md py-3 text-sm font-extrabold uppercase tracking-wider text-white shadow-lg shadow-[#E10600]/30 transition hover:bg-[#FF1A1A] active:scale-99"
+              style={{ backgroundColor: '#D71920' }}
+              className="flex w-full items-center justify-center gap-2 rounded-md py-3 text-sm font-extrabold uppercase tracking-wider text-white shadow-lg shadow-[#D71920]/30 transition hover:bg-[#E02027] active:scale-99"
             >
               <span>REGISTRAR SERVICIO</span>
             </button>

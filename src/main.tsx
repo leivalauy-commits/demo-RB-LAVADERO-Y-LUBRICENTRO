@@ -39,8 +39,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     if (this.state.hasError) {
       return (
         <div style={{
-          backgroundColor: '#050505',
-          color: '#FFFFFF',
+          backgroundColor: '#0B0B0C',
+          color: '#F5F5F5',
           minHeight: '100vh',
           display: 'flex',
           flexDirection: 'column',
@@ -52,26 +52,26 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         }}>
           <div style={{
             maxWidth: '480px',
-            backgroundColor: '#111111',
-            border: '1px solid #242424',
-            borderRadius: '12px',
+            backgroundColor: '#151617',
+            border: '1px solid #252627',
+            borderRadius: '16px',
             padding: '32px',
           }}>
-            <h1 style={{ color: '#E10600', fontSize: '20px', fontWeight: 800, margin: '0 0 12px 0', letterSpacing: '0.05em' }}>
+            <h1 style={{ color: '#D71920', fontSize: '18px', fontWeight: 800, margin: '0 0 12px 0', letterSpacing: '0.05em' }}>
               R.B. LAVADERO &amp; LUBRICENTRO
             </h1>
-            <p style={{ color: '#A3A3A3', fontSize: '14px', lineHeight: 1.5, margin: '0 0 24px 0' }}>
+            <p style={{ color: '#929497', fontSize: '13px', lineHeight: 1.5, margin: '0 0 24px 0' }}>
               Ocurrió un inconveniente al cargar el estado de la aplicación. Puede restablecer los datos locales para volver a iniciar.
             </p>
             <button
               onClick={this.handleReset}
               style={{
-                backgroundColor: '#E10600',
+                backgroundColor: '#D71920',
                 color: '#FFFFFF',
                 border: 'none',
                 borderRadius: '8px',
                 padding: '12px 24px',
-                fontSize: '14px',
+                fontSize: '13px',
                 fontWeight: 700,
                 cursor: 'pointer',
               }}

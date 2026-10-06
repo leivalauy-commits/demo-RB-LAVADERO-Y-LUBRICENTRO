@@ -62,15 +62,15 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs">
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="relative w-full max-w-lg rounded-xl border shadow-2xl overflow-hidden"
       >
         <div
-          style={{ backgroundColor: '#0D0D0D', borderColor: '#242424' }}
+          style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
           className="flex items-center justify-between border-b px-5 py-4"
         >
           <div className="flex items-center gap-2">
-            <Calendar style={{ color: '#E10600' }} className="h-5 w-5" />
+            <Calendar style={{ color: '#D71920' }} className="h-5 w-5" />
             <h2 className="text-base font-extrabold uppercase tracking-tight text-white">
               Nuevo Turno en Agenda
             </h2>
@@ -91,8 +91,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
                 required
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
             <div>
@@ -102,8 +102,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
               <select
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               >
                 {[
                   '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
@@ -129,13 +129,13 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
                 placeholder="Nombre y apellido..."
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="flex-1 rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="flex-1 rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
               />
               <select
                 onChange={(e) => handleSelectClient(e.target.value)}
-                style={{ backgroundColor: '#181818', borderColor: '#242424' }}
-                className="w-36 rounded-md border px-2 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#181818', borderColor: '#252627' }}
+                className="w-36 rounded-md border px-2 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               >
                 <option value="">O elegir...</option>
                 {clients.slice(0, 10).map((c) => (
@@ -157,8 +157,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
                 value={clientPhone}
                 onChange={(e) => setClientPhone(e.target.value)}
                 placeholder="11 5566-7788"
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
             <div>
@@ -171,8 +171,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
                 value={plate}
                 onChange={(e) => setPlate(e.target.value.toUpperCase())}
                 placeholder="AB 123 CD"
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold uppercase text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold uppercase text-white focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
           </div>
@@ -187,8 +187,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
                 value={vehicleInfo}
                 onChange={(e) => setVehicleInfo(e.target.value)}
                 placeholder="Ej: Ford Ranger"
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
             <div>
@@ -203,8 +203,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
                   const firstServ = services.find((s) => s.category === cat);
                   if (firstServ) setServiceName(firstServ.name);
                 }}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               >
                 <option value="lavadero">Lavadero</option>
                 <option value="lubricentro">Lubricentro</option>
@@ -219,8 +219,8 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
             <select
               value={serviceName}
               onChange={(e) => setServiceName(e.target.value)}
-              style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-              className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+              style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+              className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
             >
               {services
                 .filter((s) => s.category === category)
@@ -241,16 +241,16 @@ export const NewTurnoModal: React.FC<NewTurnoModalProps> = ({ isOpen, onClose })
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Ej: Avisar por WhatsApp antes de empezar"
-              style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-              className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden"
+              style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+              className="w-full rounded-md border px-3 py-1.5 text-xs text-white placeholder-[#777777] focus:border-[#D71920] focus:outline-hidden"
             />
           </div>
 
           <div className="pt-2">
             <button
               type="submit"
-              style={{ backgroundColor: '#E10600' }}
-              className="w-full rounded-md py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#FF1A1A] transition shadow-md shadow-[#E10600]/25"
+              style={{ backgroundColor: '#D71920' }}
+              className="w-full rounded-md py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#E02027] transition shadow-md shadow-[#D71920]/25"
             >
               Agendar Turno
             </button>

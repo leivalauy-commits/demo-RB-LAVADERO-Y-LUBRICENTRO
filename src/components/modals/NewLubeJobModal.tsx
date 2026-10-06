@@ -108,16 +108,16 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-xs">
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-xl border shadow-2xl"
       >
         <div
-          style={{ backgroundColor: '#0D0D0D', borderColor: '#242424' }}
+          style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
           className="sticky top-0 z-10 flex items-center justify-between border-b px-5 py-4 backdrop-blur-sm"
         >
           <div className="flex items-center gap-2.5">
             <div
-              style={{ backgroundColor: '#E10600' }}
+              style={{ backgroundColor: '#D71920' }}
               className="flex h-8 w-8 items-center justify-center rounded-md font-bold text-white"
             >
               <Wrench className="h-4 w-4" />
@@ -146,8 +146,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
               <select
                 value={selectedClientId}
                 onChange={(e) => handleSelectClient(e.target.value)}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               >
                 <option value="">Seleccionar cliente...</option>
                 {clients.map((c) => (
@@ -167,8 +167,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 value={plate}
                 onChange={(e) => setPlate(e.target.value.toUpperCase())}
                 placeholder="AB 123 CD"
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold uppercase text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold uppercase text-white focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
           </div>
@@ -183,8 +183,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 value={vehicleInfo}
                 onChange={(e) => setVehicleInfo(e.target.value)}
                 placeholder="Ej: Ford Ranger XLT"
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
             <div>
@@ -196,8 +196,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 required
                 value={currentKm}
                 onChange={(e) => setCurrentKm(Number(e.target.value))}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold text-sky-400 focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold text-sky-400 focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
             <div>
@@ -205,7 +205,7 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 Próximo Mantenimiento
               </label>
               <div
-                style={{ backgroundColor: '#141414', borderColor: '#242424' }}
+                style={{ backgroundColor: '#141414', borderColor: '#252627' }}
                 className="rounded-md border px-3 py-1.5 font-mono text-xs font-bold text-white"
               >
                 {nextMaintenanceKm.toLocaleString('es-AR')} km (+10.000)
@@ -221,8 +221,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
             <select
               value={serviceType}
               onChange={(e) => setServiceType(e.target.value)}
-              style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-              className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+              style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+              className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
             >
               <option value="Cambio de Aceite y Filtro">Cambio de Aceite y Filtro</option>
               <option value="Service Completo 10.000 km">Service Completo 10.000 km</option>
@@ -235,11 +235,11 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
 
           {/* Insumos Utilizados */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="rounded-lg border p-3.5 space-y-3"
           >
             <div className="flex items-center justify-between">
-              <label style={{ color: '#E10600' }} className="text-xs font-bold uppercase tracking-wider">
+              <label style={{ color: '#D71920' }} className="text-xs font-bold uppercase tracking-wider">
                 Productos / Insumos Utilizados
               </label>
               <select
@@ -249,8 +249,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                     e.target.value = '';
                   }
                 }}
-                style={{ backgroundColor: '#181818', borderColor: '#242424' }}
-                className="rounded-md border px-2.5 py-1 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#181818', borderColor: '#252627' }}
+                className="rounded-md border px-2.5 py-1 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               >
                 <option value="">+ Agregar Producto...</option>
                 {products.map((p) => (
@@ -270,7 +270,7 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 {usedProducts.map((item) => (
                   <div
                     key={item.productId}
-                    style={{ backgroundColor: '#111111' }}
+                    style={{ backgroundColor: '#151617' }}
                     className="flex items-center justify-between rounded px-3 py-2 text-xs"
                   >
                     <div className="flex items-center gap-2 truncate">
@@ -284,7 +284,7 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                       <button
                         type="button"
                         onClick={() => handleRemoveProduct(item.productId)}
-                        className="text-[#666666] hover:text-[#FF1A1A]"
+                        className="text-[#666666] hover:text-[#E02027]"
                       >
                         <Trash2 className="h-3.5 w-3.5" />
                       </button>
@@ -297,7 +297,7 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
 
           {/* Precios y Liquidación */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-3 rounded-lg border p-3.5"
           >
             <div>
@@ -308,8 +308,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 type="number"
                 value={laborPrice}
                 onChange={(e) => setLaborPrice(Number(e.target.value))}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 font-mono text-xs font-bold text-white focus:border-[#D71920] focus:outline-hidden"
               />
             </div>
             <div>
@@ -317,7 +317,7 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
                 Subtotal Insumos ($)
               </label>
               <div
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
                 className="rounded-md border px-3 py-1.5 font-mono text-xs text-white"
               >
                 ${productsTotal.toLocaleString('es-AR')}
@@ -345,8 +345,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
               <select
                 value={paymentMethod}
                 onChange={(e) => setPaymentMethod(e.target.value as PaymentMethod)}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white capitalize focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white capitalize focus:border-[#D71920] focus:outline-hidden"
               >
                 <option value="efectivo">Efectivo</option>
                 <option value="transferencia">Transferencia</option>
@@ -361,8 +361,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value as WashStatus)}
-                style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                className="w-full rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
               >
                 <option value="en_espera">En espera</option>
                 <option value="en_proceso">En proceso</option>
@@ -374,8 +374,8 @@ export const NewLubeJobModal: React.FC<NewLubeJobModalProps> = ({ isOpen, onClos
           <div className="pt-2">
             <button
               type="submit"
-              style={{ backgroundColor: '#E10600' }}
-              className="w-full rounded-md py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#FF1A1A] transition shadow-md shadow-[#E10600]/25"
+              style={{ backgroundColor: '#D71920' }}
+              className="w-full rounded-md py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#E02027] transition shadow-md shadow-[#D71920]/25"
             >
               Registrar Trabajo de Lubricentro
             </button>

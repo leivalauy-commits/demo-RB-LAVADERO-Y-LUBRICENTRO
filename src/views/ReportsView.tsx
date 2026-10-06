@@ -97,7 +97,7 @@ export const ReportsView: React.FC = () => {
       {/* Title */}
       <div>
         <h1 className="text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
-          <BarChart3 style={{ color: '#E10600' }} className="h-6 w-6" />
+          <BarChart3 style={{ color: '#D71920' }} className="h-6 w-6" />
           <span>Reportes y Rendimiento</span>
         </h1>
         <p className="text-xs text-[#A3A3A3] mt-0.5">
@@ -109,12 +109,12 @@ export const ReportsView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {/* SERVICIOS REALIZADOS */}
         <div
-          style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+          style={{ backgroundColor: '#151617', borderColor: '#252627' }}
           className="rounded-xl border p-5 space-y-4"
         >
-          <div style={{ borderColor: '#242424' }} className="flex items-center justify-between border-b pb-3">
+          <div style={{ borderColor: '#252627' }} className="flex items-center justify-between border-b pb-3">
             <h2 className="text-sm font-extrabold uppercase tracking-tight text-white flex items-center gap-2">
-              <Sparkles style={{ color: '#E10600' }} className="h-4 w-4" />
+              <Sparkles style={{ color: '#D71920' }} className="h-4 w-4" />
               <span>Servicios Realizados</span>
             </h2>
             <span className="text-xs text-[#777777] font-medium">Volumen operativo</span>
@@ -122,7 +122,7 @@ export const ReportsView: React.FC = () => {
 
           <div className="grid grid-cols-3 gap-3">
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 text-center"
             >
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -135,7 +135,7 @@ export const ReportsView: React.FC = () => {
             </div>
 
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 text-center"
             >
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -148,7 +148,7 @@ export const ReportsView: React.FC = () => {
             </div>
 
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 text-center"
             >
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -164,10 +164,10 @@ export const ReportsView: React.FC = () => {
 
         {/* RECAUDACIÓN */}
         <div
-          style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+          style={{ backgroundColor: '#151617', borderColor: '#252627' }}
           className="rounded-xl border p-5 space-y-4"
         >
-          <div style={{ borderColor: '#242424' }} className="flex items-center justify-between border-b pb-3">
+          <div style={{ borderColor: '#252627' }} className="flex items-center justify-between border-b pb-3">
             <h2 className="text-sm font-extrabold uppercase tracking-tight text-white flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-emerald-500" />
               <span>Recaudación</span>
@@ -177,7 +177,7 @@ export const ReportsView: React.FC = () => {
 
           <div className="grid grid-cols-3 gap-3">
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 text-center"
             >
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -190,7 +190,7 @@ export const ReportsView: React.FC = () => {
             </div>
 
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 text-center"
             >
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -203,7 +203,7 @@ export const ReportsView: React.FC = () => {
             </div>
 
             <div
-              style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+              style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
               className="rounded-lg border p-3.5 text-center"
             >
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -220,21 +220,21 @@ export const ReportsView: React.FC = () => {
 
       {/* TOP HIGHLIGHTS (Destacados del negocio) */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="rounded-xl border p-5 space-y-4"
       >
         <h2 className="text-sm font-extrabold uppercase tracking-tight text-white flex items-center gap-2">
-          <Trophy style={{ color: '#E10600' }} className="h-4 w-4" />
+          <Trophy style={{ color: '#D71920' }} className="h-4 w-4" />
           <span>Destacados Operativos</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* SERVICIO MÁS REALIZADO */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="flex items-center gap-3.5 rounded-xl border p-4"
           >
-            <div className="rounded-md bg-[#181818] p-3 text-[#E10600] border border-[#242424] shrink-0">
+            <div className="rounded-md bg-[#181818] p-3 text-[#D71920] border border-[#252627] shrink-0">
               <Sparkles className="h-6 w-6" />
             </div>
             <div>
@@ -244,7 +244,7 @@ export const ReportsView: React.FC = () => {
               <div className="font-extrabold text-sm text-white mt-0.5">
                 {topServiceName}
               </div>
-              <span style={{ color: '#E10600' }} className="font-mono text-xs font-semibold">
+              <span style={{ color: '#D71920' }} className="font-mono text-xs font-semibold">
                 {topServiceCount} veces contratado
               </span>
             </div>
@@ -252,10 +252,10 @@ export const ReportsView: React.FC = () => {
 
           {/* CLIENTE CON MÁS SERVICIOS */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="flex items-center gap-3.5 rounded-xl border p-4"
           >
-            <div className="rounded-md bg-[#181818] p-3 text-sky-400 border border-[#242424] shrink-0">
+            <div className="rounded-md bg-[#181818] p-3 text-sky-400 border border-[#252627] shrink-0">
               <UserCheck className="h-6 w-6" />
             </div>
             <div>
@@ -273,10 +273,10 @@ export const ReportsView: React.FC = () => {
 
           {/* VEHÍCULO CON MÁS VISITAS */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="flex items-center gap-3.5 rounded-xl border p-4"
           >
-            <div className="rounded-md bg-[#181818] p-3 text-emerald-400 border border-[#242424] shrink-0">
+            <div className="rounded-md bg-[#181818] p-3 text-emerald-400 border border-[#252627] shrink-0">
               <Car className="h-6 w-6" />
             </div>
             <div>
@@ -297,7 +297,7 @@ export const ReportsView: React.FC = () => {
 
       {/* Proporción Lavadero vs Lubricentro */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="rounded-xl border p-5 space-y-3"
       >
         <h2 className="text-xs font-bold uppercase tracking-wider text-[#A3A3A3]">
@@ -305,10 +305,10 @@ export const ReportsView: React.FC = () => {
         </h2>
         <div className="flex items-center gap-4">
           <div className="flex-1">
-            <div style={{ backgroundColor: '#0B0B0B' }} className="h-3 w-full rounded-full overflow-hidden flex border border-[#242424]">
+            <div style={{ backgroundColor: '#0B0B0B' }} className="h-3 w-full rounded-full overflow-hidden flex border border-[#252627]">
               <div
                 style={{
-                  backgroundColor: '#E10600',
+                  backgroundColor: '#D71920',
                   width: `${(totalWashes / (totalServices || 1)) * 100}%`,
                 }}
                 className="h-full transition-all"
@@ -327,7 +327,7 @@ export const ReportsView: React.FC = () => {
         </div>
         <div className="flex justify-between text-xs pt-1">
           <div className="flex items-center gap-2">
-            <span style={{ backgroundColor: '#E10600' }} className="h-3 w-3 rounded-xs inline-block" />
+            <span style={{ backgroundColor: '#D71920' }} className="h-3 w-3 rounded-xs inline-block" />
             <span className="text-[#A3A3A3]">
               Lavadero: <span className="font-bold text-white">{totalWashes}</span> ({Math.round((totalWashes / (totalServices || 1)) * 100)}%)
             </span>

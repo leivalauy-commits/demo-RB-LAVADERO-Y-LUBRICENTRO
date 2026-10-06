@@ -38,7 +38,7 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
-            <CalendarDays style={{ color: '#E10600' }} className="h-6 w-6" />
+            <CalendarDays style={{ color: '#D71920' }} className="h-6 w-6" />
             <span>Turnos</span>
           </h1>
           <p className="text-xs text-[#A3A3A3] mt-0.5">
@@ -48,8 +48,8 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
 
         <button
           onClick={onOpenNewTurno}
-          style={{ backgroundColor: '#E10600' }}
-          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#E10600]/25 transition-all hover:bg-[#FF1A1A] active:scale-98"
+          style={{ backgroundColor: '#D71920' }}
+          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#D71920]/25 transition-all hover:bg-[#E02027] active:scale-98"
         >
           <Plus className="h-4 w-4 stroke-[3]" />
           <span>+ Nuevo Turno</span>
@@ -58,20 +58,20 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
 
       {/* Date bar & status filter */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 rounded-xl border p-4"
       >
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#A3A3A3]">
-            <Calendar style={{ color: '#E10600' }} className="h-4 w-4" />
+            <Calendar style={{ color: '#D71920' }} className="h-4 w-4" />
             <span>Fecha:</span>
           </div>
           <input
             type="date"
             value={selectedDate}
             onChange={(e) => setSelectedDate(e.target.value)}
-            style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-            className="rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+            style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+            className="rounded-md border px-3 py-1.5 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
           />
         </div>
 
@@ -80,8 +80,8 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
             onClick={() => setFilterStatus('all')}
             style={
               filterStatus === 'all'
-                ? { backgroundColor: '#E10600', color: '#FFFFFF' }
-                : { backgroundColor: '#0B0B0B', borderColor: '#242424', color: '#A3A3A3' }
+                ? { backgroundColor: '#D71920', color: '#FFFFFF' }
+                : { backgroundColor: '#0B0B0B', borderColor: '#252627', color: '#A3A3A3' }
             }
             className="rounded-md px-2.5 py-1 text-xs font-bold transition border"
           >
@@ -93,8 +93,8 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
               onClick={() => setFilterStatus(st)}
               style={
                 filterStatus === st
-                  ? { backgroundColor: '#1E1E1E', borderColor: '#E10600', color: '#FFFFFF' }
-                  : { backgroundColor: '#0B0B0B', borderColor: '#242424', color: '#666666' }
+                  ? { backgroundColor: '#1E1E1E', borderColor: '#D71920', color: '#FFFFFF' }
+                  : { backgroundColor: '#0B0B0B', borderColor: '#252627', color: '#666666' }
               }
               className="rounded-md px-2.5 py-1 text-xs font-semibold uppercase transition border hover:text-white"
             >
@@ -106,10 +106,10 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
 
       {/* Agenda Time Slots List */}
       <div
-        style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+        style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
         className="rounded-xl border shadow-sm overflow-hidden"
       >
-        <div style={{ borderColor: '#242424' }} className="divide-y divide-[#1F1F1F]">
+        <div style={{ borderColor: '#252627' }} className="divide-y divide-[#1F1F1F]">
           {filteredTurnos.length === 0 ? (
             <div className="py-12 text-center text-[#777777] text-xs">
               No hay turnos registrados para esta fecha o estado.
@@ -120,17 +120,17 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
               return (
                 <div
                   key={turno.id}
-                  style={{ backgroundColor: '#111111' }}
+                  style={{ backgroundColor: '#151617' }}
                   className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 hover:bg-[#181818] transition"
                 >
                   {/* Left: Time and Car */}
                   <div className="flex items-start md:items-center gap-4">
                     {/* Time Box */}
                     <div
-                      style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+                      style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
                       className="flex flex-col items-center justify-center rounded-md border px-3 py-2 text-center min-w-[70px]"
                     >
-                      <Clock style={{ color: '#E10600' }} className="h-3.5 w-3.5 mb-0.5" />
+                      <Clock style={{ color: '#D71920' }} className="h-3.5 w-3.5 mb-0.5" />
                       <span className="font-mono text-sm font-black text-white">
                         {turno.time}
                       </span>
@@ -185,8 +185,8 @@ export const TurnosView: React.FC<TurnosViewProps> = ({
                     <select
                       value={turno.status}
                       onChange={(e) => updateTurnoStatus(turno.id, e.target.value as TurnoStatus)}
-                      style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-                      className="rounded border px-2 py-1 text-xs text-white focus:border-[#E10600] focus:outline-hidden"
+                      style={{ backgroundColor: '#0B0B0C', borderColor: '#292929' }}
+                      className="rounded border px-2 py-1 text-xs text-white focus:border-[#D71920] focus:outline-hidden"
                     >
                       <option value="confirmado">Confirmado</option>
                       <option value="en_espera">En Espera</option>

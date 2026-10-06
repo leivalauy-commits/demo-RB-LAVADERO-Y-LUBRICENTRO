@@ -13,7 +13,7 @@ export const LicensePlate: React.FC<LicensePlateProps> = ({ plate, size = 'md', 
   if (size === 'sm') {
     return (
       <span
-        style={{ backgroundColor: '#0D0D0D', borderColor: '#242424' }}
+        style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
         className={`inline-flex items-center font-mono font-bold tracking-wider px-2 py-0.5 rounded border text-white text-xs shadow-xs ${className}`}
       >
         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-1.5 inline-block"></span>
@@ -25,7 +25,7 @@ export const LicensePlate: React.FC<LicensePlateProps> = ({ plate, size = 'md', 
   if (size === 'lg') {
     return (
       <div
-        style={{ borderColor: '#242424' }}
+        style={{ borderColor: '#252627' }}
         className={`inline-flex flex-col rounded-md border-2 bg-white text-slate-950 font-mono shadow-md overflow-hidden min-w-[150px] ${className}`}
       >
         {isMercosur ? (
@@ -48,7 +48,7 @@ export const LicensePlate: React.FC<LicensePlateProps> = ({ plate, size = 'md', 
   // Medium (standard default)
   return (
     <div
-      style={{ backgroundColor: '#0D0D0D', borderColor: '#242424' }}
+      style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
       className={`inline-flex items-center gap-1.5 rounded border px-2.5 py-1 text-xs font-mono font-bold tracking-wider text-white shadow-xs ${className}`}
     >
       <span className="h-2 w-2 rounded-full bg-blue-500 shadow-xs" title="Mercosur / Argentina" />

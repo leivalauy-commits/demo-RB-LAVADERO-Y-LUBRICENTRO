@@ -3,13 +3,13 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    background-color: #050505;
-    color: #FFFFFF;
+    background-color: #0B0B0C;
+    color: #F5F5F5;
     -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background-color: #E10600;
+    background-color: #D71920;
     color: #FFFFFF;
   }
 
@@ -19,13 +19,13 @@
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #050505;
+    background: #0B0B0C;
   }
   ::-webkit-scrollbar-thumb {
-    background: #242424;
+    background: #252627;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #E10600;
+    background: #D71920;
   }
 }

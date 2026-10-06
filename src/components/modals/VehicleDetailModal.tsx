@@ -28,12 +28,12 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-xs">
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl border shadow-2xl"
       >
         {/* Header */}
         <div
-          style={{ backgroundColor: '#0D0D0D', borderColor: '#242424' }}
+          style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
           className="sticky top-0 z-10 flex items-center justify-between border-b px-5 py-4 backdrop-blur-sm"
         >
           <div className="flex items-center gap-3">
@@ -43,7 +43,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 {vehicle.brand} {vehicle.model}
               </h2>
               <p className="text-xs text-[#A3A3A3]">
-                Titular: <span style={{ color: '#E10600' }} className="font-semibold">{vehicle.clientName}</span>
+                Titular: <span style={{ color: '#D71920' }} className="font-semibold">{vehicle.clientName}</span>
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
         <div className="p-5 space-y-5">
           {/* Quick specs */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="grid grid-cols-2 sm:grid-cols-4 gap-3 rounded-lg border p-3.5 text-xs"
           >
             <div>
@@ -87,9 +87,9 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
               className="rounded-lg border p-3.5 flex items-center justify-between"
             >
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 style={{ color: '#E10600' }} className="h-5 w-5 shrink-0" />
+                <CheckCircle2 style={{ color: '#D71920' }} className="h-5 w-5 shrink-0" />
                 <div>
-                  <span style={{ color: '#E10600' }} className="text-xs font-bold uppercase tracking-wider block">
+                  <span style={{ color: '#D71920' }} className="text-xs font-bold uppercase tracking-wider block">
                     Próximo Mantenimiento de Aceite
                   </span>
                   <p className="text-xs text-[#A3A3A3]">
@@ -102,8 +102,8 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                   onClose();
                   onOpenNewServiceWithPlate(vehicle.plate);
                 }}
-                style={{ backgroundColor: '#E10600' }}
-                className="rounded-md px-3 py-1.5 text-xs font-bold text-white hover:bg-[#FF1A1A] transition"
+                style={{ backgroundColor: '#D71920' }}
+                className="rounded-md px-3 py-1.5 text-xs font-bold text-white hover:bg-[#E02027] transition"
               >
                 + Cargar Servicio
               </button>
@@ -118,7 +118,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
 
             {vehicleWashes.length === 0 && vehicleLube.length === 0 ? (
               <div
-                style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+                style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
                 className="rounded-lg border p-4 text-center text-xs text-[#777777]"
               >
                 No hay servicios registrados previamente para este vehículo.
@@ -128,11 +128,11 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 {vehicleLube.map((l) => (
                   <div
                     key={l.id}
-                    style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+                    style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
                     className="flex items-center justify-between rounded-lg border p-3 text-xs"
                   >
                     <div className="flex items-center gap-2.5">
-                      <div className="rounded bg-[#181818] p-1.5 text-white border border-[#242424]">
+                      <div className="rounded bg-[#181818] p-1.5 text-white border border-[#252627]">
                         <Wrench className="h-4 w-4" />
                       </div>
                       <div>
@@ -154,11 +154,11 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 {vehicleWashes.map((w) => (
                   <div
                     key={w.id}
-                    style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+                    style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
                     className="flex items-center justify-between rounded-lg border p-3 text-xs"
                   >
                     <div className="flex items-center gap-2.5">
-                      <div className="rounded bg-[#181818] p-1.5 text-[#E10600] border border-[#242424]">
+                      <div className="rounded bg-[#181818] p-1.5 text-[#D71920] border border-[#252627]">
                         <Sparkles className="h-4 w-4" />
                       </div>
                       <div>

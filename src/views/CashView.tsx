@@ -31,7 +31,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
-            <Wallet style={{ color: '#E10600' }} className="h-6 w-6" />
+            <Wallet style={{ color: '#D71920' }} className="h-6 w-6" />
             <span>Caja Diaria</span>
           </h1>
           <p className="text-xs text-[#A3A3A3] mt-0.5">
@@ -42,16 +42,16 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => onOpenNewMovement('egreso')}
-            style={{ backgroundColor: '#181818', borderColor: '#242424' }}
+            style={{ backgroundColor: '#181818', borderColor: '#252627' }}
             className="inline-flex items-center gap-1.5 rounded-md border px-3.5 py-2 text-xs font-bold text-white hover:bg-[#222222] transition"
           >
-            <Minus className="h-4 w-4 text-[#FF1A1A]" />
+            <Minus className="h-4 w-4 text-[#E02027]" />
             <span>- EGRESO</span>
           </button>
           <button
             onClick={() => onOpenNewMovement('ingreso')}
-            style={{ backgroundColor: '#E10600' }}
-            className="inline-flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#E10600]/25 hover:bg-[#FF1A1A] transition"
+            style={{ backgroundColor: '#D71920' }}
+            className="inline-flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#D71920]/25 hover:bg-[#E02027] transition"
           >
             <Plus className="h-4 w-4 stroke-[3]" />
             <span>+ INGRESO</span>
@@ -63,7 +63,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* RECAUDACIÓN DEL DÍA */}
         <div
-          style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+          style={{ backgroundColor: '#151617', borderColor: '#252627' }}
           className="rounded-xl border p-5 shadow-sm"
         >
           <span className="text-[11px] font-bold uppercase tracking-wider text-[#A3A3A3] block">
@@ -79,7 +79,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
         {/* INGRESOS */}
         <div
-          style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+          style={{ backgroundColor: '#151617', borderColor: '#252627' }}
           className="rounded-xl border p-5 shadow-sm"
         >
           <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 block flex items-center justify-between">
@@ -96,14 +96,14 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
         {/* EGRESOS */}
         <div
-          style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+          style={{ backgroundColor: '#151617', borderColor: '#252627' }}
           className="rounded-xl border p-5 shadow-sm"
         >
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF1A1A] block flex items-center justify-between">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[#E02027] block flex items-center justify-between">
             <span>Egresos / Gastos</span>
-            <ArrowUpRight className="h-4 w-4 text-[#E10600]" />
+            <ArrowUpRight className="h-4 w-4 text-[#D71920]" />
           </span>
-          <div className="mt-2 text-2xl xl:text-3xl font-mono font-black text-[#FF1A1A]">
+          <div className="mt-2 text-2xl xl:text-3xl font-mono font-black text-[#E02027]">
             {formatCurrency(todayStats.todayExpense || 35000)}
           </div>
           <span className="text-[11px] text-[#777777] mt-1 block">
@@ -113,10 +113,10 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
         {/* SALDO NETO */}
         <div
-          style={{ backgroundColor: '#111111', borderColor: 'rgba(225, 6, 0, 0.3)' }}
+          style={{ backgroundColor: '#151617', borderColor: 'rgba(225, 6, 0, 0.3)' }}
           className="rounded-xl border p-5 shadow-sm"
         >
-          <span style={{ color: '#E10600' }} className="text-[11px] font-bold uppercase tracking-wider block">
+          <span style={{ color: '#D71920' }} className="text-[11px] font-bold uppercase tracking-wider block">
             Saldo en Caja
           </span>
           <div className="mt-2 text-2xl xl:text-3xl font-mono font-black text-white">
@@ -130,7 +130,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
       {/* Desglose por método de pago */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="rounded-xl border p-5 space-y-4"
       >
         <h2 className="text-xs font-bold uppercase tracking-wider text-[#A3A3A3]">
@@ -139,11 +139,11 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {/* EFECTIVO */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="flex items-center justify-between rounded-xl border p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="rounded-md bg-[#181818] p-2.5 text-emerald-400 border border-[#242424]">
+              <div className="rounded-md bg-[#181818] p-2.5 text-emerald-400 border border-[#252627]">
                 <Banknote className="h-5 w-5" />
               </div>
               <div>
@@ -157,11 +157,11 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
           {/* TRANSFERENCIA */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="flex items-center justify-between rounded-xl border p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="rounded-md bg-[#181818] p-2.5 text-sky-400 border border-[#242424]">
+              <div className="rounded-md bg-[#181818] p-2.5 text-sky-400 border border-[#252627]">
                 <Send className="h-5 w-5" />
               </div>
               <div>
@@ -175,11 +175,11 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
           {/* TARJETA */}
           <div
-            style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+            style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
             className="flex items-center justify-between rounded-xl border p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="rounded-md bg-[#181818] p-2.5 text-purple-400 border border-[#242424]">
+              <div className="rounded-md bg-[#181818] p-2.5 text-purple-400 border border-[#252627]">
                 <CreditCard className="h-5 w-5" />
               </div>
               <div>
@@ -195,10 +195,10 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
 
       {/* Tabla de Movimientos */}
       <div
-        style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+        style={{ backgroundColor: '#0B0B0B', borderColor: '#252627' }}
         className="rounded-xl border shadow-sm overflow-hidden space-y-3"
       >
-        <div style={{ borderColor: '#242424' }} className="flex items-center justify-between p-4 border-b">
+        <div style={{ borderColor: '#252627' }} className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center gap-2">
             <h2 className="text-sm font-extrabold uppercase tracking-tight text-white">
               Movimientos del Día
@@ -211,7 +211,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
           <div className="flex gap-1">
             <button
               onClick={() => setFilterType('all')}
-              style={filterType === 'all' ? { backgroundColor: '#E10600', color: '#FFFFFF' } : undefined}
+              style={filterType === 'all' ? { backgroundColor: '#D71920', color: '#FFFFFF' } : undefined}
               className={`rounded-md px-2.5 py-1 text-xs font-semibold ${
                 filterType === 'all' ? 'font-bold' : 'text-[#A3A3A3] hover:text-white'
               }`}
@@ -229,7 +229,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
             </button>
             <button
               onClick={() => setFilterType('egreso')}
-              style={filterType === 'egreso' ? { backgroundColor: 'rgba(225, 6, 0, 0.15)', borderColor: '#E10600', color: '#FF1A1A' } : undefined}
+              style={filterType === 'egreso' ? { backgroundColor: 'rgba(225, 6, 0, 0.15)', borderColor: '#D71920', color: '#E02027' } : undefined}
               className={`rounded-md px-2.5 py-1 text-xs font-semibold ${
                 filterType === 'egreso' ? 'font-bold border' : 'text-[#A3A3A3] hover:text-white'
               }`}
@@ -242,7 +242,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead
-              style={{ backgroundColor: '#111111', borderColor: '#242424' }}
+              style={{ backgroundColor: '#151617', borderColor: '#252627' }}
               className="border-b uppercase font-bold text-[#A3A3A3] text-[11px] tracking-wider"
             >
               <tr>
@@ -253,7 +253,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
                 <th className="px-4 py-2.5 text-right">Monto</th>
               </tr>
             </thead>
-            <tbody style={{ borderColor: '#242424' }} className="divide-y divide-[#1F1F1F]">
+            <tbody style={{ borderColor: '#252627' }} className="divide-y divide-[#1F1F1F]">
               {filteredMovements.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="py-8 text-center text-[#777777] text-xs">
@@ -264,7 +264,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
                 filteredMovements.map((m) => (
                   <tr
                     key={m.id}
-                    style={{ backgroundColor: '#111111' }}
+                    style={{ backgroundColor: '#151617' }}
                     className="transition hover:bg-[#181818]"
                   >
                     <td className="px-4 py-3 font-mono font-semibold text-[#A3A3A3] whitespace-nowrap">
@@ -283,7 +283,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
                         className={`inline-flex items-center gap-1 rounded px-2 py-0.5 text-[11px] font-bold uppercase ${
                           m.type === 'ingreso'
                             ? 'bg-[#042111] border border-emerald-500/30 text-emerald-300'
-                            : 'bg-[#2A0505] border border-[#E10600]/40 text-[#FF1A1A]'
+                            : 'bg-[#2A0505] border border-[#D71920]/40 text-[#E02027]'
                         }`}
                       >
                         {m.type === 'ingreso' ? '+' : '-'} {m.type}
@@ -294,7 +294,7 @@ export const CashView: React.FC<CashViewProps> = ({ onOpenNewMovement }) => {
                     </td>
                     <td
                       className={`px-4 py-3 font-mono font-bold text-right whitespace-nowrap ${
-                        m.type === 'ingreso' ? 'text-emerald-400' : 'text-[#FF1A1A]'
+                        m.type === 'ingreso' ? 'text-emerald-400' : 'text-[#E02027]'
                       }`}
                     >
                       {m.type === 'ingreso' ? '+' : '-'} {formatCurrency(m.amount)}

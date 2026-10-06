@@ -50,29 +50,29 @@ export const WashesView: React.FC<WashesViewProps> = ({
       {/* Title & Action */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2.5">
-            <Sparkles style={{ color: '#E10600' }} className="h-6 w-6" />
-            <span>Lavados</span>
+          <h1 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-[#F5F5F5] flex items-center gap-2.5">
+            <Sparkles style={{ color: '#D71920' }} className="h-6 w-6" />
+            <span>Control de Lavados</span>
           </h1>
-          <p className="text-xs text-[#A3A3A3] mt-0.5">
-            Registro, orden y control de lavados diarios
+          <p className="text-xs text-[#929497] mt-0.5">
+            Registro, orden y estado de vehículos en pista
           </p>
         </div>
 
         <button
           onClick={onOpenNewService}
-          style={{ backgroundColor: '#E10600' }}
-          className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#E10600]/25 transition-all hover:bg-[#FF1A1A] active:scale-98"
+          style={{ backgroundColor: '#D71920' }}
+          className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#D71920]/20 transition hover:bg-[#E02027] active:scale-98"
         >
-          <Plus className="h-4 w-4 stroke-[3]" />
-          <span>+ Nuevo Lavado</span>
+          <Plus className="h-4 w-4" />
+          <span>+ NUEVO LAVADO</span>
         </button>
       </div>
 
       {/* Filters and Search Bar */}
       <div
-        style={{ backgroundColor: '#111111', borderColor: '#242424' }}
-        className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 rounded-xl border p-4"
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
+        className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 rounded-xl border p-3.5"
       >
         {/* Status segmented filters */}
         <div className="flex flex-wrap items-center gap-1.5">
@@ -88,16 +88,16 @@ export const WashesView: React.FC<WashesViewProps> = ({
                 onClick={() => setActiveFilter(tab.id)}
                 style={
                   isActive
-                    ? { backgroundColor: '#E10600', color: '#FFFFFF' }
-                    : { backgroundColor: '#0B0B0B', borderColor: '#242424', color: '#A3A3A3' }
+                    ? { backgroundColor: '#252627', color: '#F5F5F5' }
+                    : { backgroundColor: '#0B0B0C', borderColor: '#252627', color: '#929497' }
                 }
-                className={`rounded-md px-3 py-1.5 text-xs font-bold transition flex items-center gap-1.5 ${
-                  isActive ? 'shadow-xs' : 'border hover:text-white'
+                className={`rounded-lg px-3 py-1.5 text-xs font-bold transition flex items-center gap-1.5 ${
+                  isActive ? 'text-[#F5F5F5]' : 'border hover:text-[#F5F5F5]'
                 }`}
               >
                 <span>{tab.label}</span>
                 <span
-                  style={isActive ? { backgroundColor: 'rgba(0,0,0,0.35)' } : { backgroundColor: '#181818' }}
+                  style={isActive ? { backgroundColor: 'rgba(0,0,0,0.4)' } : { backgroundColor: '#151617' }}
                   className="text-[10px] px-1.5 py-0.2 rounded font-mono"
                 >
                   {count}
@@ -109,28 +109,28 @@ export const WashesView: React.FC<WashesViewProps> = ({
 
         {/* Search */}
         <div className="relative w-full md:w-80">
-          <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#777777]" />
+          <Search className="absolute left-3 top-2.5 h-4 w-4 text-[#55575A]" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Buscar por Patente, Cliente o Vehículo..."
-            style={{ backgroundColor: '#0D0D0D', borderColor: '#292929' }}
-            className="w-full rounded-md border py-2 pl-9 pr-3 text-xs text-white placeholder-[#777777] focus:border-[#E10600] focus:outline-hidden focus:ring-1 focus:ring-[#E10600]/40"
+            placeholder="Buscar por patente, cliente..."
+            style={{ backgroundColor: '#0B0B0C', borderColor: '#252627' }}
+            className="w-full rounded-lg border py-2 pl-9 pr-3 text-xs text-[#F5F5F5] placeholder-[#55575A] focus:border-[#D71920] focus:outline-hidden"
           />
         </div>
       </div>
 
       {/* Main Table */}
       <div
-        style={{ backgroundColor: '#0B0B0B', borderColor: '#242424' }}
+        style={{ backgroundColor: '#151617', borderColor: '#252627' }}
         className="overflow-hidden rounded-xl border shadow-sm"
       >
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead
-              style={{ backgroundColor: '#111111', borderColor: '#242424' }}
-              className="border-b uppercase font-bold text-[#A3A3A3] text-[11px] tracking-wider"
+              style={{ backgroundColor: '#101112', borderColor: '#252627' }}
+              className="border-b uppercase font-bold text-[#929497] text-[11px] tracking-wider"
             >
               <tr>
                 <th className="px-4 py-3">Hora / Ticket</th>
@@ -143,10 +143,10 @@ export const WashesView: React.FC<WashesViewProps> = ({
                 <th className="px-4 py-3 text-right">Acciones</th>
               </tr>
             </thead>
-            <tbody style={{ borderColor: '#242424' }} className="divide-y divide-[#1F1F1F]">
+            <tbody style={{ borderColor: '#252627' }} className="divide-y divide-[#252627]">
               {filteredWashes.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="py-12 text-center text-[#777777] text-xs">
+                  <td colSpan={8} className="py-12 text-center text-[#55575A] text-xs">
                     No se encontraron lavados para este filtro o búsqueda.
                   </td>
                 </tr>
@@ -156,15 +156,14 @@ export const WashesView: React.FC<WashesViewProps> = ({
                   return (
                     <tr
                       key={wash.id}
-                      style={{ backgroundColor: '#111111' }}
-                      className="transition hover:bg-[#181818] group"
+                      className="transition hover:bg-[#1A1B1D]"
                     >
                       {/* Hora / Ticket */}
                       <td className="px-4 py-3 whitespace-nowrap">
-                        <span className="font-mono text-white font-semibold">
+                        <span className="font-mono text-[#F5F5F5] font-semibold">
                           {wash.createdAt.split(' ')[1] || wash.createdAt}
                         </span>
-                        <span className="block text-[10px] text-[#777777] font-mono">
+                        <span className="block text-[10px] text-[#55575A] font-mono">
                           #{wash.ticketNumber}
                         </span>
                       </td>
@@ -181,22 +180,22 @@ export const WashesView: React.FC<WashesViewProps> = ({
                       </td>
 
                       {/* Cliente */}
-                      <td className="px-4 py-3 font-semibold text-white whitespace-nowrap">
+                      <td className="px-4 py-3 font-semibold text-[#F5F5F5] whitespace-nowrap">
                         {wash.clientName}
                       </td>
 
                       {/* Vehículo */}
-                      <td className="px-4 py-3 text-[#A3A3A3] whitespace-nowrap">
+                      <td className="px-4 py-3 text-[#929497] whitespace-nowrap">
                         {wash.vehicleInfo}
                       </td>
 
                       {/* Servicio */}
-                      <td style={{ color: '#E10600' }} className="px-4 py-3 font-semibold whitespace-nowrap">
+                      <td style={{ color: '#D71920' }} className="px-4 py-3 font-semibold whitespace-nowrap">
                         {wash.serviceName}
                       </td>
 
                       {/* Precio */}
-                      <td className="px-4 py-3 font-mono font-bold text-white text-right whitespace-nowrap">
+                      <td className="px-4 py-3 font-mono font-bold text-[#F5F5F5] text-right whitespace-nowrap">
                         ${wash.price.toLocaleString('es-AR')}
                       </td>
 
@@ -216,8 +215,8 @@ export const WashesView: React.FC<WashesViewProps> = ({
                           {wash.status === 'en_espera' && (
                             <button
                               onClick={() => updateWashStatus(wash.id, 'en_proceso')}
-                              style={{ backgroundColor: '#E10600' }}
-                              className="rounded px-2.5 py-1 text-[11px] font-bold text-white hover:bg-[#FF1A1A] transition shadow-xs"
+                              style={{ backgroundColor: '#D71920' }}
+                              className="rounded px-2.5 py-1 text-[11px] font-bold text-white hover:bg-[#E02027] transition shadow-xs"
                               title="Comenzar lavado"
                             >
                               Iniciar
@@ -249,8 +248,8 @@ export const WashesView: React.FC<WashesViewProps> = ({
                           {/* Quick details / plate inspector */}
                           <button
                             onClick={() => onSelectPlate(wash.plate)}
-                            style={{ backgroundColor: '#181818', borderColor: '#242424' }}
-                            className="rounded border p-1 text-[#A3A3A3] hover:text-white transition"
+                            style={{ backgroundColor: '#101112', borderColor: '#252627' }}
+                            className="rounded border p-1 text-[#929497] hover:text-[#F5F5F5] transition"
                             title="Ver ficha de vehículo"
                           >
                             <Eye className="h-3.5 w-3.5" />
